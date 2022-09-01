@@ -1,15 +1,13 @@
 import React from 'react'
-import {View, Text, Button, StyleSheet, Linking} from 'react-native'
+import {View, Text, Button, StyleSheet} from 'react-native'
 
 const FavScreen = () => {
-
-    const url_settings = 'demoapp://profilescreen/Smith';
     return(
         <View style={styles.container}>
             <Text style={styles.title}>Favourite Screen</Text>
             <Button
             title="Click Here"
-            onPress={() => Linking.openURL(url_settings)}
+            onPress={() => alert("Button Clicked")}
             />
         </View>
     );
