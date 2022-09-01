@@ -1,13 +1,12 @@
 import React from 'react'
 import {View, Text, Button, StyleSheet} from 'react-native'
 
-const ProfileScreen = ({route}) => {
-    const {user} = route.params;
+const ProfileScreen = () => {
 
     return(
         <View style={styles.container}>
        <Text style={styles.title}>
-        My name is {user}
+        My name is 
        </Text>
         </View>
     );
