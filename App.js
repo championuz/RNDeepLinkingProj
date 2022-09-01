@@ -14,37 +14,16 @@
  import ProfileScreen from './screens/ProfileScreen';
  import FavScreen from './screens/FavScreen';
  import Settings from './screens/Settings';
- import { Image, StyleSheet, ActivityIndicator } from 'react-native';
+ import { Image, StyleSheet } from 'react-native';
 //  import Icon from 'react-native-vector-icons/Ionicons'
  
  const Tab = createMaterialBottomTabNavigator();
 
  const Stack = createNativeStackNavigator();
- const HomeStack = createNativeStackNavigator();
- const FavStack = createNativeStackNavigator();
- const ProfileStack = createNativeStackNavigator();
- const SettingsStack = createNativeStackNavigator();
 
-  const linking = {
-  prefixes: [ 'demoapp://'],
-  config: {
-        screens: {
-              HomeScreen: 'homescreen',
-              FavouriteScreen: 'favscreen',
-              ProfileScreen: {
-                screens: {
-                  Profile: {
-                     path: 'profilescreen/:user/',
-                },
-              },
-            },
-              SettingsScreen: 'settingsscreen',
-  },
-  },
-};
  
  const App = () => (
-   <NavigationContainer linking={linking}>
+   <NavigationContainer >
   <Tab.Navigator
   initialRouteName="Home"
   activeColor="#fff"
